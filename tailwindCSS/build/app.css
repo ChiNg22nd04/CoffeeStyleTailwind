@@ -1,0 +1,26 @@
+.nav-mobile_input:checked ~ .overlay{
+    display: block;
+    /* transition: all;
+    transition: ease-in-out;
+    transition-duration: initial; */
+}
+.nav-mobile_input:checked ~ .nav-mobile_list{
+    /* position: fixed; */
+    transform: translateX(0px);
+    transition: all;
+}
+.overlay{
+    animation: faceIn liner 0.2s;
+}
+/* .nav-mobile_list {
+    transform: translateX(310px);
+    transition: transform linear 0.8s;
+} */
+@keyframes faceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

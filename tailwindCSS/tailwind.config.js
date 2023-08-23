@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors :{
         gray33: "#333",
+        'overlay' : 'rgba(0, 0, 0, 0.3)',
       },
       spacing:{
         35: "35px",
