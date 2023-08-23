@@ -1,3 +1,6 @@
+:root{
+    --height-header: 90px;
+}
 .nav-mobile_input:checked ~ .overlay{
     display: block;
     /* transition: all;
@@ -16,6 +19,7 @@
     transform: translateX(310px);
     transition: transform linear 0.8s;
 } */
+
 @keyframes faceIn {
     from {
         opacity: 0;
@@ -23,4 +27,12 @@
     to {
         opacity: 1;
     }
+}
+
+.toggle-darkMode:checked ~ .btn-toggle{
+    transform: translateX(50px);
+    
+}
+.toggle-darkMode:checked ~ .toggleDark{
+    background-color: #000;
 }

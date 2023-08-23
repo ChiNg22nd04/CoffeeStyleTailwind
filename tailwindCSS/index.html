@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,82 +11,72 @@
 </head>
 <body>
     <!-- npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch -->
-    <div id="root" class="h-[100vh] overflow-x-hidden overflow-y-auto"> 
-        <div class="pt-1 relative">
+    <div id="root" class="h-[100vh] overflow-x-hidden overflow-y-auto bg-white dark:bg-black toggbleDark"> 
+        <!-- <label for="toggle" class="w-[90px] h-[40px] border border-[#ccc] rounded-full fixed
+         bottom-4 right-4 z-10 p-[5px] cursor-pointer">
+            <input type="checkbox" name="" id="toggle" class="toggle-darkMode hidden">
+            <div class="w-7 h-7 bg-[#ccc] rounded-full btn-toggle transition-all"></div>
+        </label> -->
+        <div class=" relative">
             <div class="2xl:px-20 sm:px-8 px-2">
                 <input hidden type="checkbox" name="" id="nav-mobile" class="nav-mobile_input">
                 <label for="nav-mobile" class="fixed top-0 bottom-0 left-0 right-0 bg-overlay hidden overlay"></label>
                 <!-- nav mobile -->
-                <label for="nav-mobile" class="fixed top-0 right-0 bottom-0 w-[50%] bg-white uppercase mf-10 text-center
-                 lg:hidden nav-mobile_list transition-all duration-500 ease-linear translate-x-[400px] sm:translate-x-[550px]">
+                <label for="nav-mobile" class="fixed top-0 right-0 bottom-0 w-[50%] bg-white dark:bg-black uppercase mf-10 text-center
+                 lg:hidden nav-mobile_list transition-all duration-500 ease-linear translate-x-[400px] sm:translate-x-[550px] z-50">
                 <!-- transition-all duration-300 ease-out translate-x-[180px] sm:translate-x-[320px] -->
                     <div class=" font-semibold text-xl 2xl:xl:px-10 normal-case lg:px-5
-                     py-[25px] px-4 bor bg-orange-100 text-amber-950 text-[23px] ">
+                     py-[28px] px-4 bor bg-orange-100 text-amber-950 text-[23px] dark:bg-neutral-500 ">
                      CoffeeStyle.
                      <i class="fa-solid fa-mug-hot"></i>
                      </div>
                     <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
                             before:hover:h-[2px] before:hover:bg-[#b79c94]
                             before:hover:absolute before:hover:transition-transform before:hover:left-0 
-                            before:hover:bottom-0 p-4 bg-slate-50 border-t-2" href="#home">home</a>
+                            before:hover:bottom-0 p-4 bg-slate-50 border-t-2 dark:bg-neutral-300" href="#home">home</a>
                     <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
                             before:hover:h-[2px] before:hover:bg-[#b79c94]
                             before:hover:absolute before:hover:transition-transform
-                             before:hover:left-0 before:hover:bottom-0  bg-slate-50 p-4" href="">products</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4" href="">blog</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4" href="">contact</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4" href="">styleguide</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans p-5 border-2 bg-[#fbfbfb] m-2" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
+                             before:hover:left-0 before:hover:bottom-0  bg-slate-50 p-4 dark:bg-neutral-300" href="">products</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">blog</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">contact</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">styleguide</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans p-5 border-2 bg-[#fbfbfb] m-2 dark:bg-neutral-400" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
                 </label>
-
-                <!-- nav mobile -->
-                <!-- <div class="fixed top-0 right-0 bottom-0 w-[40%] bg-white uppercase mf-10 lg:hidden text-center
-                    translate-x-[180px] sm:translate-x-[320px] lg:hidden">
-                    <div class=" font-semibold text-xl 2xl:xl:px-10 normal-case lg:px-5 p-4 border-b-2">CoffeeStyle.</div>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
-                            before:hover:h-[2px] before:hover:bg-[#b79c94]
-                            before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="#home">home</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
-                            before:hover:h-[2px] before:hover:bg-[#b79c94]
-                            before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="">products</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">blog</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">contact</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">styleguide</a>
-                    <a class="block 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
-                </div> -->
-                <header id="home" class="lg:p-8 sm:p-8 sm:px-20 w-full max-w-screen-2xl flex justify-between mx-auto my-2 p-4">
-                    <div class="inline-block font-semibold text-xl 2xl:xl:px-10 lg:px-5">CoffeeStyle.</div>
+                <!-- lg:p-8 sm:p-8 -->
+                <header id="home" class=" sm:px-20 w-full max-w-screen-2xl flex justify-between mx-auto p-7 fixed top-0 left-0 right-0 bg-white dark:bg-black z-20 border-b-[0.5px]">
+                    <a href="" class="inline-block font-semibold text-xl 2xl:xl:px-10 lg:px-5 dark:text-white">CoffeeStyle.</a>
                     
                     <nav class="inline-flex uppercase">
                         <!-- nav tablet pc -->
                         <div class="relative uppercase mf-10 lg:inline-flex sm:hidden hidden">
-                            <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
                                     before:hover:h-[2px] before:hover:bg-[#b79c94]
                                     before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="#home">home</a>
-                            <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
                                     before:hover:h-[2px] before:hover:bg-[#b79c94]
                                     before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="">products</a>
-                            <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">blog</a>
-                            <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">contact</a>
-                            <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">styleguide</a>
-                            <a class="block 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">blog</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">contact</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">styleguide</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans dark:text-white" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
                         </div>
                         
                         <div class="lg:pr-0 pr-6">
-                            <a class="inline-block 2xl:xl:px-10 lg:px-5 text-[#6B7280] text-[14px] font-sans hover:text-[#333]" href="">
+                            <a class="inline-block 2xl:xl:px-10 lg:px-5 text-[#6B7280] text-[14px] font-sans hover:text-[#333] dark:hover:text-white" href="">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 <span class="px-1 ">cart</span>
                                 <span class="text-white bg-orange-400 rounded-full px-[5px]">7</span>
                             </a>
                         </div>
                         
-                        <label for="nav-mobile" class="lg:hidden text-[18px] icon-mobile">
+                        <label for="nav-mobile" class="lg:hidden text-[18px] icon-mobile dark:text-white">
                             <i class="fa-solid fa-list"></i>
                         </label>
                     </nav>
                     
                 </header>   
-                <div class="flex bg-[url(https://coffee-style-trungquandev.web.app/img/slider-bg.jpeg)] bg-cover bg-bottom max-w-screen-2xl sm:h-[700px] h-[600px] w-full mx-auto">
+                <div class="flex bg-[url(https://coffee-style-trungquandev.web.app/img/slider-bg.jpeg)] bg-cover bg-bottom max-w-screen-2xl sm:h-[700px] h-[600px] w-full mx-auto mt-24">
                     <!-- <img class="max-w-screen-2xl h-[700px] w-full mx-auto relative" src="" alt=""> -->
                     <div class="w-full text-center flex flex-col justify-center bg-[#0a0e28] bg-opacity-[0.4] mx-4 sm:mx-0 ">
                         <p class="text-white text-[16px] font-light mb-6">BEST PLACE TO BUY COFFEE</p>
@@ -145,7 +135,7 @@
                 sm:w-[95%]">
                     <div class="mb-6">
                         <!-- hover:opacity-10 hover:bg-gray-900 -->
-                        <a href="" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-01.jpg)] bg-cover bg-center
+                        <a href="#" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-01.jpg)] bg-cover bg-center
                             h-[300px] sm:h-[500px] relative ">
                             <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-150 relative group">
                                 <div class="absolute bg-white text-black bottom-5 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-5 uppercase text-[12px] font-semibold">Explore Mug</div>
@@ -153,13 +143,13 @@
                             
                         </a>
                         <div class="text-center mt-8 sm:mb-8 lg:mb-0">
-                            <p class="text-xl mb-3">Pink Premium Ceramic</p>
+                            <p class="text-xl mb-3 dark:text-white">Pink Premium Ceramic</p>
                             <p class="text-gray-500 text-base">$99.00 USD</p>
                         </div>
 
                     </div>
                     <div>
-                        <a href="" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-02.jpg)] bg-cover bg-center
+                        <a href="#" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-02.jpg)] bg-cover bg-center
                         h-[300px] sm:h-[500px] ">
                             <!-- hover:opacity-10 hover:bg-gray-900 -->
                             <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-150 relative group ">
@@ -168,7 +158,7 @@
                             </div>
                         </a>
                         <div class="text-center mt-8">
-                            <p class="text-xl mb-3">Golden Designer Mug</p>
+                            <p class="text-xl mb-3 dark:text-white">Golden Designer Mug</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$50.00 USD</p>
                             <del class="text-gray-500 text-sm">$99.00 USD</del>
                         </div>
@@ -183,29 +173,6 @@
                 <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
             </div>
 
-            <!-- <div class="lg:mx-24 sm:mx-auto">
-                <div class="lg:grid grid-cols-3 gap-2 2xl:w-[75%] mx-auto sm:w-[95%]">
-                    <div class="cart h-full w-full">
-                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-01.jpeg)] h-[380px] bg-cover bg-center">
-                            <a href="#" class="">
-                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
-                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
-                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
-                                </div>
-                            </a>
-                            <div class="text-center mt-8">
-                                <p class="text-xl mb-3">Red Love Cup</p>
-                                <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
-                                <del class="text-gray-500 text-sm">$37.00 USD</del>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    
-                </div>
-            </div> -->
-
             <div id="product" class="xl:mx-24 lg:mx-10 sm:mx-auto px-2">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 
                             2xl:w-[75%] mx-auto sm:w-[95%]">
@@ -219,7 +186,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -235,7 +202,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -250,7 +217,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -265,7 +232,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -280,7 +247,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
                         </div>
@@ -295,7 +262,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -310,7 +277,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
                         </div>
@@ -325,7 +292,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <del class="text-gray-500 text-sm">$37.00 USD</del>
                         </div>
@@ -340,7 +307,7 @@
                             </a>
                         </div>
                         <div class="text-center my-6">
-                            <p class="text-xl mb-3">Red Love Cup</p>
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
                             <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
                             <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
                         </div>
@@ -366,9 +333,9 @@
                     </div>
                     <div class="text-center md:text-start md:basis-1/2 md:px-10">
                         <p class="uppercase text-[#6B7280] text-[14px] mb-2">PREMIUM OFFER</p>
-                        <p class="text-[36px] mb-2">Get our Coffee Magazine</p>
+                        <p class="text-[36px] mb-2 dark:text-white">Get our Coffee Magazine</p>
                         <p class="text-[#6B7280] text-[14px] mb-4">The most versatile furniture system ever created. Designed to fit your life.</p>
-                        <p class="uppercase text-white p-5 px-9 bg-black inline-block cursor-pointer">start shopping</p>
+                        <p class="uppercase text-white p-5 px-9 bg-black inline-block cursor-pointer dark:bg-white dark:text-black">start shopping</p>
                     </div>
                 </div>
             </div>
@@ -395,7 +362,7 @@
                             </a>
                         </div>
                         <div class="lg:text-start my-6 lg:mx-0 mx-2">
-                            <p class="text-xl hover:text-[#a3604d]">Health Check: why do I get a headache when I haven't had my coffee?</p>
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">Health Check: why do I get a headache when I haven't had my coffee?</p>
                             <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                             <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
                         </div>
@@ -410,7 +377,7 @@
                             </a>
                         </div>
                         <div class="lg:text-start my-6 lg:mx-0 mx-2">
-                            <p class="text-xl hover:text-[#a3604d]">How long does a cup of coffee keep you awake?</p>
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">How long does a cup of coffee keep you awake?</p>
                             <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.</p>
                             <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
                         </div>
@@ -425,7 +392,7 @@
                             </a>
                         </div>
                         <div class="lg:text-start lg:mb-0 my-6 lg:mx-0 mx-2 mb-14">
-                            <p class="text-xl hover:text-[#a3604d]">Recent research suggests that heavy coffee drinkers may reap health benefits.</p>
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">Recent research suggests that heavy coffee drinkers may reap health benefits.</p>
                             <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                             <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
                         </div>
@@ -455,5 +422,7 @@
             <div class="my-8 mb-40"></div>
          </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

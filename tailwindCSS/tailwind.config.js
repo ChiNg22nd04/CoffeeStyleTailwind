@@ -3,6 +3,7 @@ module.exports = {
   mode: "jit",
   purge: ["./**/*.html", "./**/*.{js,jsx,ts,tsx,vue}"],
   content: [],
+  darkMode: 'class',
   theme: {
     extend: {
       colors :{
