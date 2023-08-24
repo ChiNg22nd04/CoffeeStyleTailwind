@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeStyle Tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <link rel="stylesheet" href="./build/app.css">
+    <!-- <link rel="stylesheet" href="./tailwindCSS/build/tailwind.css"> -->
+</head>
+<body>
+    <!-- npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch -->
+    <div id="root" class="h-[100vh] overflow-x-hidden overflow-y-auto bg-white dark:bg-black toggbleDark"> 
+        <!-- <label for="toggle" class="w-[90px] h-[40px] border border-[#ccc] rounded-full fixed
+         bottom-4 right-4 z-10 p-[5px] cursor-pointer">
+            <input type="checkbox" name="" id="toggle" class="toggle-darkMode hidden">
+            <div class="w-7 h-7 bg-[#ccc] rounded-full btn-toggle transition-all"></div>
+        </label> -->
+        
+        <div class=" relative">
+            <div class="2xl:px-20 sm:px-8 px-2">
+                <input hidden type="checkbox" name="" id="nav-mobile" class="nav-mobile_input">
+                <label for="nav-mobile" class="fixed top-0 bottom-0 left-0 right-0 bg-overlay hidden overlay z-[25]"></label>
+                <!-- nav mobile -->
+                <label for="nav-mobile" class="fixed top-0 right-0 bottom-0 w-[50%] bg-white dark:bg-black uppercase mf-10 text-center
+                 lg:hidden nav-mobile_list transition-all duration-500 ease-linear translate-x-[400px] sm:translate-x-[550px] z-50">
+                <!-- transition-all duration-300 ease-out translate-x-[180px] sm:translate-x-[320px] -->
+                    <div class=" font-semibold text-xl 2xl:xl:px-10 normal-case lg:px-5
+                     py-[28px] px-4 bor bg-orange-100 text-amber-950 text-[23px] dark:bg-neutral-500 ">
+                     CoffeeStyle.
+                     <i class="fa-solid fa-mug-hot"></i>
+                     </div>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                            before:hover:h-[2px] before:hover:bg-[#b79c94]
+                            before:hover:absolute before:hover:transition-transform before:hover:left-0 
+                            before:hover:bottom-0 p-4 bg-slate-50 border-t-2 dark:bg-neutral-300" href="#home">home</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                            before:hover:h-[2px] before:hover:bg-[#b79c94]
+                            before:hover:absolute before:hover:transition-transform
+                             before:hover:left-0 before:hover:bottom-0  bg-slate-50 p-4 dark:bg-neutral-300" href="">products</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">blog</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">contact</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans bg-slate-50 p-4 dark:bg-neutral-300" href="">styleguide</a>
+                    <a class="block 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans p-5 border-2 bg-[#fbfbfb] m-2 dark:bg-neutral-400" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
+                </label>
+                <!-- lg:p-8 sm:p-8 -->
+                <header id="home" class=" sm:px-20 lg:px-16 w-full max-w-screen-2xl flex justify-between mx-auto p-7 
+                fixed top-0 left-0 right-0 bg-white dark:bg-black z-20 border-b-[0.5px] items-center">
+                <div class="inline-flex">
+                    <a href="" class="flex items-center font-semibold text-[17px] sm:text-xl 2xl:xl:pl-10 2xl:xl:pr-2 lg:pl-5 sm:pr-1 dark:text-white">
+                        CoffeeStyle.
+                    </a>
+                    <button id="replaceTheme" class="h-10 w-10 flex justify-center items-center focus:outline-none text-yellow-500">
+                        <svg class="w-7 h-7 sm:w-9 sm:h-9" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                    
+                    <nav class="inline-flex uppercase">
+                        <!-- nav tablet pc -->
+                        <div class="relative uppercase mf-10 lg:inline-flex sm:hidden hidden">
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                                    before:hover:h-[2px] before:hover:bg-[#b79c94]
+                                    before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="#home">home</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans
+                                    before:hover:h-[2px] before:hover:bg-[#b79c94]
+                                    before:hover:absolute before:hover:transition-transform before:hover:left-0 before:hover:bottom-0" href="">products</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">blog</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">contact</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 text-[#6B7280] hover:text-[#1F2937] text-[14px] font-sans" href="">styleguide</a>
+                            <a class="block dark:hover:text-white 2xl:xl:px-5 lg:px-3 2xl:xl:pr-10 lg:pr-10 text-[#1F2937] text-[14px] font-sans dark:text-white" href="https://www.facebook.com/elyzabellanchi">ChiNg22nd04</a>
+                        </div>
+                        
+                        <div class="lg:pr-0 pr-6">
+                            <a class="inline-block 2xl:xl:px-10 lg:px-5 text-[#6B7280] text-[14px] font-sans hover:text-[#333] dark:hover:text-white" href="">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span class="px-1 ">cart</span>
+                                <span class="text-white bg-orange-400 rounded-full px-[5px]">7</span>
+                            </a>
+                        </div>
+                        
+                        <label for="nav-mobile" class="lg:hidden text-[18px] icon-mobile dark:text-white">
+                            <i class="fa-solid fa-list"></i>
+                        </label>
+                    </nav>
+                    
+                </header>   
+                <div class="flex bg-[url(https://coffee-style-trungquandev.web.app/img/slider-bg.jpeg)] bg-cover bg-bottom max-w-screen-2xl sm:h-[700px] h-[600px] w-full mx-auto mt-24">
+                    <!-- <img class="max-w-screen-2xl h-[700px] w-full mx-auto relative" src="" alt=""> -->
+                    <div class="w-full text-center flex flex-col justify-center bg-[#0a0e28] bg-opacity-[0.4] mx-4 sm:mx-0 ">
+                        <p class="text-white text-[16px] font-light mb-6">BEST PLACE TO BUY COFFEE</p>
+                        <p class="text-white text-[48px] mb-6" >Coffee Mugs</p>
+                        <p class="text-white text-[18px] mb-6 sm:mx-16 xl:mx-0">The most versatile furniture system ever created. Designed to fit your life, made to move and grow.</p>
+    
+                        <div class="my-10">
+                            <a class="text-black text-[13px] uppercase bg-white p-6 cursor-pointer">EXPLORE OUR PRODUCTS</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-[#6B7280] text-[14px] my-20 flex justify-center items-center">
+                <span class="block w-24 h-[0.5px] bg-[#6B7280] "></span>
+                <span class="px-6 text-center">OUR COFFEE STORY</span>
+                <span class="block w-24 h-[0.5px] bg-[#6B7280] "></span>
+            </div>
+
+            <div class="lg:mx-24 sm:mx-auto px-2">
+                <div class="lg:grid lg:grid-cols-2 gap-1
+                2xl:w-[75%] mx-auto lg:gap-8
+                sm:w-[95%]
+                ">
+                     <video autoplay loop muted class="w-full h-full object-cover min-h-[350px] ls:pr-3" src="./tailwindCSS/img:video/coffee-video.mp4" type="video/mp4"></video>
+                    <!-- <video autoplay loop muted class="w-full h-full object-cover min-h-[350px] ls:pr-3" src="./img:video/coffee-video.mp4" type="video/mp4"></video> -->
+                    <div class="sm:pt-8 lg:pt-0 mx-5 flex justify-center flex-col text-center pt-5 lg:text-start ">
+                        <p class="leading-10 text-[30px] font-sans mb-[24px] dark:text-white">What is your most special coffee?</p>
+                        <p class="leading-7 text-[16px] text-[#6B7280] mb-[24px]">The French Press is a brewing method that comes closest to cupping. 
+                            Cupping is the prescribed method by which coffee should be judged. 
+                            Nothing separates the water from the coffee. To properly discover the flavours,
+                            it is best to drink the coffee this way. Everyone has their favourite brewing method.
+                        </p>
+                        <div class="mb-2">
+                            <a href="#" class="text-[#A25F4B] hover:text-[#874a38] relative 
+                            before:absolute before:bottom-[-10px] before:left-0 before:w-full 
+                            before:bg-[#e8d6d0] before:h-[2px] hover:before:bg-[#a26f60]">
+                            Read the full Story
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>  
+            
+            <div class="text-[#6B7280] text-[14px] my-20 flex justify-center">
+                <span class="block w-24 h-[0.5px] bg-[#6B7280] translate-y-2"></span>
+                <span class="px-6 text-center">FEATURED MUGS</span>
+                <span class="block w-24 h-[0.5px] bg-[#6B7280] translate-y-2"></span>
+            </div>
+
+            <div class="lg:mx-24 sm:mx-auto px-2">
+                <div class="lg:grid grid-cols-2 gap-2
+                2xl:w-[75%] mx-auto lg:gap-5
+                sm:w-[95%]">
+                    <div class="mb-6">
+                        <!-- hover:opacity-10 hover:bg-gray-900 -->
+                        <a href="#" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-01.jpg)] bg-cover bg-center
+                            h-[300px] sm:h-[500px] relative ">
+                            <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-150 relative group">
+                                <div class="absolute bg-white text-black bottom-5 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-5 uppercase text-[12px] font-semibold">Explore Mug</div>
+                            </div>
+                            
+                        </a>
+                        <div class="text-center mt-8 sm:mb-8 lg:mb-0">
+                            <p class="text-xl mb-3 dark:text-white">Pink Premium Ceramic</p>
+                            <p class="text-gray-500 text-base">$99.00 USD</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a href="#" class="block bg-[url(https://coffee-style-trungquandev.web.app/img/featured-mug-02.jpg)] bg-cover bg-center
+                        h-[300px] sm:h-[500px] ">
+                            <!-- hover:opacity-10 hover:bg-gray-900 -->
+                            <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-150 relative group ">
+                                <div class="absolute bg-white text-[#ab6d5b] right-5 top-5 p-4 px-6 font-semibold">On Sale.</div>
+                                <div class="absolute bg-white text-black bottom-5 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-5 uppercase text-[12px] font-semibold">Explore Mug</div>
+                            </div>
+                        </a>
+                        <div class="text-center mt-8">
+                            <p class="text-xl mb-3 dark:text-white">Golden Designer Mug</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$50.00 USD</p>
+                            <del class="text-gray-500 text-sm">$99.00 USD</del>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-[#6B7280] text-[14px] my-20 flex justify-center items-center">
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+                <span class="px-6 text-center">MORE PRODUCTS</span>
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+            </div>
+
+            <div id="product" class="xl:mx-24 lg:mx-10 sm:mx-auto px-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 
+                            2xl:w-[75%] mx-auto sm:w-[95%]">
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-01.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-02.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-03.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <!-- <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div> -->
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-04.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <!-- <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div> -->
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-05.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <!-- <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div> -->
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-06.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <!-- <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div> -->
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-07.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-08.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <del class="text-gray-500 text-sm">$37.00 USD</del>
+                        </div>
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/product-coffee-09.jpeg)] h-[380px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute w-[100px] bg-white text-[#ab6d5b] py-2 px-4 top-3 right-3 text-center font-semibold text-coffee-400">On Sale.</div>
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Explore Mug</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center my-6">
+                            <p class="text-xl mb-3 dark:text-white">Red Love Cup</p>
+                            <p class="inline-block text-[#a3604d] text-base pr-2">$25.00 USD</p>
+                            <!-- <del class="text-gray-500 text-sm">$37.00 USD</del> -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-[#6B7280] text-[14px] my-20 flex justify-center items-center">
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+                <span class="px-6 text-center">BUY 2 MUGS AND GET A COFFEE MAGAZINE FREE</span>
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+            </div>
+            <div class="sm:mx-auto lg:mx-10 xl:mx-24 mb-16 px-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 2xl:w-[75%] mx-auto sm:w-[95%] md:flex-col sm:flex-row items-center">
+                    <div class="sm:flex flex-col md:basis-1/2 md:flex-row">
+                        <div class="sm:mr-0 h-[280px] mb-5 md:basis-2/3 md:mr-[18px] w-auto bg-[url(https://coffee-style-trungquandev.web.app/img/magazine-image-01.jpeg)] bg-cover bg-center bg-no-repeat"></div>
+                        <div class="sm:flex sm:gap-5  md:basis-1/3 md:flex-col">
+                            <div class="sm:h-[200px] sm:w-[50%] md:h-[130px] md:w-auto bg-[url(https://coffee-style-trungquandev.web.app/img/magazine-image-02.jpeg)] bg-cover bg-center bg-no-repeat"></div>
+                            <div class="sm:h-[200px] sm:w-[50%] md:h-[130px] md:w-auto bg-[url(https://coffee-style-trungquandev.web.app/img/magazine-image-03.jpeg)] bg-cover bg-center bg-no-repeat"></div>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-start md:basis-1/2 md:px-10">
+                        <p class="uppercase text-[#6B7280] text-[14px] mb-2">PREMIUM OFFER</p>
+                        <p class="text-[36px] mb-2 dark:text-white">Get our Coffee Magazine</p>
+                        <p class="text-[#6B7280] text-[14px] mb-4">The most versatile furniture system ever created. Designed to fit your life.</p>
+                        <p class="uppercase text-white p-5 px-9 bg-black inline-block cursor-pointer dark:bg-white dark:text-black">start shopping</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[40vh]" style="transform-style:preserve-3d ;">
+                <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/bg-parallax-01.jpeg)] 
+                bg-cover bg-center bg-no-repeat absolute w-full h-full" style="z-index: -1; background-attachment:fixed;">
+
+                </div>
+            </div>
+            <div class="text-[#6B7280] text-[14px] my-20 flex justify-center items-center">
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+                <span class="px-6 text-center">BEHIND THE MUGS, LIFESTYLE STORIES</span>
+                <span class="block w-24 h-[0.5px] bg-[#6B7280]"></span>
+            </div>
+            <div class="xl:mx-24 lg:mx-10 sm:mb-24 sm:mx-auto px-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 
+                            2xl:w-[75%] mx-auto sm:w-[95%]">
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/lifestyle-story-01.jpeg)] h-[300px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Read The Full Store</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg:text-start my-6 lg:mx-0 mx-2">
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">Health Check: why do I get a headache when I haven't had my coffee?</p>
+                            <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
+                        </div>
+
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/lifestyle-story-02.jpeg)] h-[300px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Read The Full Store</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg:text-start my-6 lg:mx-0 mx-2">
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">How long does a cup of coffee keep you awake?</p>
+                            <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.</p>
+                            <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
+                        </div>
+
+                    </div>
+                    <div class="cart h-auto">
+                        <div class="bg-[url(https://coffee-style-trungquandev.web.app/img/lifestyle-story-03.jpeg)] h-[300px] bg-cover bg-center">
+                            <a href="#" class="">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10 hover:transition-all hover:ease-in-out hover:duration-400 relative group">
+                                    <div class="absolute bg-white text-black bottom-3 w-11/12 h-14 items-center justify-center hidden group-hover:flex sm:w-95% mx-[23px] lg:mx-[13.5px] uppercase text-[12px] font-semibold ">Read The Full Store</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg:text-start lg:mb-0 my-6 lg:mx-0 mx-2 mb-14">
+                            <p class="text-xl hover:text-[#a3604d] dark:text-white">Recent research suggests that heavy coffee drinkers may reap health benefits.</p>
+                            <p class="inline-block text-gray-500 text-base pr-2 my-4">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p class="text-gray-500 text-xs font-semibold">OCTOBER 9, 2018</p>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <div class="2xl:px-20 sm:px-8">
+                <div class="bg-[#1d1f2e] py-20">
+                    <div class="text-[#6B7280] text-[14px] my-3 flex justify-center items-center">
+                        <span class="block w-10 h-[0.5px] bg-[#6B7280]"></span>
+                        <span class="px-6 text-center">SIGN UP AND GET FREE COFFEE BAGS</span>
+                        <span class="block w-10 h-[0.5px] bg-[#6B7280]"></span>
+                    </div>
+                    <p class="text-3xl my-6 text-white text-center">Coffee Updates</p>
+                    <div class="text-center">
+                        <input type="email" placeholder="ChiNg22nd04@gmail.com" class="min-w-[40%] uppercase text-xs font-semibold inline-block bg-transparent outline-none p-3 px-5 mr-3 leading-6 border-[1px]
+                            border-gray-700 hover:border-gray-300 text-white">
+                        <!-- <p class="inline-block uppercase text-xs text-black bg-white p-[17px] px-8">subscribe</p> -->
+                        <button type="submit" class="inline-block uppercase text-xs text-black bg-white p-[17px] px-8">subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-8 mb-40"></div>
+         </div>
+    </div>
+
+    <script src="./tailwindCSS/main.js"></script>
+</body>
+</html>
