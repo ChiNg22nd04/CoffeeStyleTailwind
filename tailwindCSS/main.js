@@ -1,29 +1,53 @@
-// function replaceTheme(element) {
-//     if(element.target.checked) {
-//         document.documentElement.setAttribute("class","dark");
-//         localStorage.setItem("themes","dark");
-//     }else{
-//         ocument.documentElement.setAttribute("class","light");
-//         localStorage.setItem("themes","light");
-//     }
+// Tự động bật dark/light theo media
+// if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+//   document.documentElement.classList.add('light')
+// } else {
+//   document.documentElement.classList.add('dark')
+// }
+// localStorage.removeItem('theme')
+
+
+
+// Để check xem hiện tại user có đang ở chế độ dark-mode hay không ta 
+// sử dụng: window.matchMedia("(prefers-color-scheme: dark)").matches;
+//  Sau đó tuỳ vào kết quả trả về mà ta có add class .DarkMode vào thẻ <html> hay là không 
+
+if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.querySelector('html').classList.add('dark');
+} else if (localStorage.theme === 'dark') {
+  document.querySelector('html').classList.add('dark');
+}
+
+document.getElementById('replaceTheme').addEventListener('click', function() {
+  var htmlClasses = document.querySelector('html').classList;
+  if(localStorage.theme == 'dark') {
+    htmlClasses.remove('dark');
+    localStorage.removeItem('theme');
+  } else {
+    htmlClasses.add('dark');
+    localStorage.theme = 'dark';
+  }
+})
+
+
+// var htmlClasses = document.querySelector('html').classList;
+// const themeee = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// if (themeee == true ) {
+//   document.querySelector('html').classList.add('dark');
+// } else {
+//   document.querySelector('html').classList.remove('dark');
 // }
 
-// toggleDark.addEventListener("change",replaceTheme);
+// document.getElementById('replaceTheme').addEventListener('click', function() {
+//   var htmlClasses = document.querySelector('html').classList;
+//   if (localStorage.theme == 'dark') {
+//     htmlClasses.remove('dark');
+//     localStorage.removeItem('theme');
+//   } else {
+//     htmlClasses.add('dark');
+//     localStorage.theme = 'dark';
+//   }
+// })
 
-// Tự động bật dark/light theo media
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-    document.documentElement.classList.add('light')
-  } else {
-    document.documentElement.classList.remove('light')
-    document.documentElement.classList.add('dark')
-  }
-  
-  // Whenever the user explicitly chooses light mode
-//   localStorage.theme = 'light'
-  
-  // Whenever the user explicitly chooses dark mode
-//   localStorage.theme = 'dark'
-  
-  // Whenever the user explicitly chooses to respect the OS preference
-  localStorage.removeItem('theme')
+
+// console.log(themeee)
